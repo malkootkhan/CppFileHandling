@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <iterator>
 
 
 using namespace std;
@@ -25,6 +26,12 @@ int main()
 			textVec.push_back(textData);
 
 		}
+		vector<string>::iterator itr = textVec.begin();
+			while (itr== textVec.end())
+			{
+				cout << *itr << endl;
+				itr++;
+			}
 		//find the number of characters in the file
 		cout << textData.capacity()*textVec.size() << endl;
 
